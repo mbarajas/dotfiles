@@ -1,0 +1,22 @@
+[user]
+  email = manuel.jose.barajas@gmail.com
+  name = Manuel Barajas
+[alias]
+  co = checkout
+  st = status
+[color]
+  ui = auto
+  diff = always
+  pager = true
+[color "status"]
+  added = yellow
+  changed = green
+  untracked = red
+[format]
+  pretty = format:"%h %C(yellow)%ci%Creset %Cgreen%an%Creset | %s"
+[push]
+  default = simple
+[url "https://"]
+  insteadOf = http://
+[log]
+  follow = true
