@@ -1,4 +1,4 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+ Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block, everything else may go below.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
@@ -50,7 +50,7 @@ export SAVEHIST=10000
 # location of history
 export HISTFILE=~/.zhistory
 
-# AWS
+# AWS Creds
 export AWS_DEFAULT_REGION="us-east-1"
 
 #ALIASES
@@ -65,6 +65,10 @@ alias grep='grep --color=auto'
 alias ll='ls -la'
 alias please='sudo'
 alias weather='curl wttr.in'
+alias tron='ssh sshtron.zachlatta.com'
+alias cheat='curl cht.sh'
+alias python='python3'
+alias pip='pip3'
 
 #HISTORY
 # History options
@@ -84,3 +88,11 @@ bindkey '\e[A' history-search-backward
 bindkey '\e[B' history-search-forward
 #bindkey '\e[A' history-beginning-search-backward
 #bindkey '\e[B' history-beginning-search-forward
+
+
+#FUNCTIONS
+how_in()
+{
+  where="$1"; shift
+  IFS=+ curl "cht.sh/$where/$*"
+}
