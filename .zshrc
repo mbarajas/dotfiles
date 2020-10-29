@@ -1,4 +1,4 @@
- Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+ #Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block, everything else may go below.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
@@ -69,6 +69,11 @@ alias tron='ssh sshtron.zachlatta.com'
 alias cheat='curl cht.sh'
 alias python='python3'
 alias pip='pip3'
+alias pg_start="launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist"
+alias pg_stop="launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist"
+alias mv="mv -iv"
+alias cp="cp -riv"
+alias mkdir="mkdir -vp"
 
 #HISTORY
 # History options
